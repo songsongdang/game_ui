@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'game.dart';
 
 class GameScreen extends StatefulWidget {
+  final String characterName;
+
+  GameScreen({required this.characterName});
+
   @override
   _GameScreenState createState() => _GameScreenState();
 }
@@ -20,7 +24,8 @@ class _GameScreenState extends State<GameScreen> {
     setState(() => isLoading = true);
     game = Game();
     try {
-      await game!.startGame();
+      // 캐릭터 이름을 전달하여 게임 초기화
+      await game!.startGame(characterName: widget.characterName);
       setState(() => isLoading = false);
     } catch (e) {
       setState(() {

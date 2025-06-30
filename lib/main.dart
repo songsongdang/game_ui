@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'game_screen.dart'; // 게임 메인 화면 위젯
+import 'character_name_screen.dart'; // 캐릭터 이름 입력 화면
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: GameScreen(), // 게임 메인 화면
+      home: CharacterNameScreen(), // 캐릭터 이름 입력 화면으로 시작
       debugShowCheckedModeBanner: false,
     );
   }
